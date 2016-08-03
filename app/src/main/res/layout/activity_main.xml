@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/main_view">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Pokemon Tracker"
+                android:id="@+id/pk_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"/>
+            <TextView
+                android:id="@+id/pk_logger"
+                android:gravity="left"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lines="20"
+                android:scrollbars="vertical"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:text="Please sign in with a false account and ensure that location permissions for this app are ON."
+                android:background="#ececec"
+                android:layout_below="@id/pk_title"></TextView>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rescan"
+                android:id="@+id/pk_snapshot"
+                android:layout_gravity="center_horizontal"
+                android:onClick="snapshot"
+                android:layout_below="@+id/pk_logger"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/pk_sleep_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sleep (s)"
+                android:layout_alignBottom="@+id/pk_snapshot"
+                android:layout_toEndOf="@+id/pk_snapshot"
+                android:layout_alignTop="@+id/pk_snapshot"
+                android:gravity="center_vertical" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:id="@+id/pk_sleep"
+                android:layout_alignBottom="@+id/pk_sleep_label"
+                android:layout_toEndOf="@+id/pk_sleep_label" />
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Distance"
+                android:textStyle="bold"
+                android:id="@+id/pk_dist_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pk_snapshot" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pk_dist_type"
+                android:onClick="toggleDistanceType"
+                android:layout_below="@+id/pk_dist_label"
+                android:layout_alignStart="@+id/pk_logger" />
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="  Precise (meters)"
+                android:id="@+id/pk_dist_label2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/pk_dist_type"
+                android:layout_alignBottom="@+id/pk_dist_type"/>
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Direction"
+                android:textStyle="bold"
+                android:id="@+id/pk_dir_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pk_dist_type"
+                android:layout_alignStart="@+id/pk_logger"
+                android:layout_toRightOf="@+id/pk_dist_label2"/>
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pk_dir_spinner"
+                android:layout_below="@+id/pk_dir_label"
+                android:layout_alignStart="@+id/pk_logger" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pk_dir_type"
+                android:onClick="toggleDirectionType"
+                android:layout_below="@+id/pk_dir_spinner"
+                android:layout_alignStart="@+id/pk_logger" />
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="  Precise (degrees)"
+                android:id="@+id/pk_dir_label2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pk_dir_type"
+                android:layout_toRightOf="@+id/pk_dir_type" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="DummyAccount"
+                android:id="@+id/lg_username"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="Password"
+                android:id="@+id/lg_password"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Sign In"
+                android:id="@+id/lg_signin"
+                android:layout_gravity="center_horizontal"
+                android:onClick="signin" />
+            <ListView
+                android:id="@+id/pk_list_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"></ListView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

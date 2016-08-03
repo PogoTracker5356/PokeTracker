@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">PokeTracker</string>
+
+
+    <string-array name="direction_array">
+        <item value="0">Never</item>
+        <item value="1">Always</item>
+        <item value="2">If Distance Unknown</item>
+    </string-array>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="action_relogin">Relogin</string>
+
+
+    <string name="pref_cat_user_account">User Account</string>
+    <string name="pref_warning">NOTE: Do NOT use your main account for this application!
+        Instead, create and use a fake Pokémon Trainer Club account with a different password and email.</string>
+    <string name="pref_username">Set Username</string>
+    <string name="pref_username_key">UsernameKey</string>
+    <string name="pref_default_username">John Doe</string>
+    <string name="pref_password">Set Password</string>
+    <string name="pref_password_key">PasswordKey</string>
+    <string name="pref_default_password">***</string>
+
+    <string name="pref_cat_general">General</string>
+    <string name="pref_pokestops_title">Show Pokéstops</string>
+    <string name="pref_pokestops_key">pokestops_checkbox</string>
+    <string name="pref_gyms_title">Show Gyms</string>
+    <string name="pref_gyms_key">gyms_checkbox</string>
+
+    <string name="toast_credentials">Can\'t login. Please check your credentials</string>
+    <string name="title_activity_poke_map">Pokemon Nearby</string>
+
+    <string name="login_warning">It is recommended to
+    instead create and use a fake Pokémon Trainer Club account with a different password and email or
+        use a Google account not attached to your Pokemon Go account. As using this app could result in your account being </string>
+    <string name="prompt_username">PTC Username</string>
+    <string name="prompt_password">PTC Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="error_field_required">Field Required</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="login_warning_title">Warning:</string>
+
+    <string name="request_credentials_title">Insert your Pokemon Go credentials</string>
+    <string name="search_pokemon_map_suggestion">(Long press on map to change searching position)</string>
+
+</resources>

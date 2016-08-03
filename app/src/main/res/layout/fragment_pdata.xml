@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#a5ffff"
+    android:gravity="center_vertical|center_horizontal"
+    android:clickable="false"
+    android:onClick="toggleHighlight">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="0"
+        android:id="@+id/pk_id"
+        android:visibility="invisible" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="0"
+        android:id="@+id/pk_enc_id"
+        android:visibility="invisible" />
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/pk_x"
+        android:src="@drawable/p0"
+        android:onClick="clearPokemon"
+        android:layout_alignParentEnd="true" />
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/pk_icon"
+        android:layout_toLeftOf="@id/pk_x" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="POKEMON"
+        android:id="@+id/pk_type"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignParentStart="true"/>
+    <RelativeLayout
+        android:id="@+id/pk_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/pk_type">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="m"
+            android:id="@+id/pk_distance" />
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="E"
+            android:id="@+id/pk_direction"
+            android:layout_toRightOf="@+id/pk_distance"/>
+    </RelativeLayout>
+    <net.anon.poketracker.CountdownView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:textAlignment="viewEnd"
+        android:id="@+id/pk_despawn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:layout_alignBottom="@id/pk_data"/>
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:textAlignment="viewEnd"
+        android:id="@+id/pk_despawn_text"
+        android:text="0"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignBottom="@id/pk_icon"/>
+</RelativeLayout>
+
+
